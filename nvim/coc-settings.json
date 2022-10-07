@@ -1,3 +1,4 @@
 {
-    "suggest.noselect": true
+    "suggest.noselect": true,
+    "snippets.userSnippetsDirectory": "$HOME/linux-config/nvim/snippets"
 }

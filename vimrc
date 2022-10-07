@@ -1,48 +1,45 @@
-" General vim settings {{{1
 
-" Tabs {{{2
 set tabstop=4
 set shiftwidth=4
 set expandtab
-
-" Line numbers {{{2
 set relativenumber
 
-" Plugins {{{1
 call plug#begin('~/.vim/plugged')
 
-" Airline {{{2
+" Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" LaTeX {{{2
+" LaTeX
 Plug 'lervag/vimtex'
 
-" CoC {{{2
+" CoC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = [
-    \ 'coc-snippets', 
-    \ 'coc-clangd', 
-    \ 'coc-pyright',
-    \ 'coc-vimtex',
-    \ 'coc-html',
-    \ 'coc-css',
-    \ 'coc-tsserver',
-    \ 'coc-json',
-    \ 'coc-julia']
+let g:coc_global_extensions = [ 
+            \ 'coc-snippets', 'coc-sh', 'coc-clangd', 'coc-pyright', 'coc-vimtex',
+            \ 'coc-html', 'coc-css', 'coc-tsserver', 'coc-json', 'coc-julia']
 
-" Syntax highlighting {{{2
+" Tree sitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-" Color scheme {{{2
+" Snippets
+" Plug 'sirver/ultisnips'
+" let g:UltiSnipsSnippetsDir = '$HOME/linux-config/vim-snippets'
+" let g:UltiSnipsExpandTrigger = '<tab>'
+" let g:UltiSnipsJumpForwardTrigger = '<tab>'
+" let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+
+" Color scheme
 set termguicolors
 Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 
-" Settings {{{1
-
-" Coc {{{2
+"
+" CoC settings
+"
+imap <C-l> <Plug>(coc-snippets-expand)
+vmap <C-j> <Plug>(coc-snippets-select)
 
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -70,7 +67,9 @@ endfunction
 vmap <leader>a <Plug>(coc-codeaction-selected)
 nmap <leader>a <Plug>(coc-codeaction-selected)
 
-" Tree-Sitter {{{2
+"
+" Tree sitter settings
+"
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
@@ -84,10 +83,8 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 
-" Colorscheme {{{2
+"
+" Colorscheme settings
+"
 colorscheme nord
-
-" Transparent background {{{2
-hi Normal guibg=NONE
-
-" vim:foldmethod=marker
+hi Normal guibg=NONE " Transparent background
