@@ -16,18 +16,11 @@ Plug 'lervag/vimtex'
 " CoC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:coc_global_extensions = [ 
-            \ 'coc-snippets', 'coc-sh', 'coc-clangd', 'coc-pyright', 'coc-vimtex',
+            \ 'coc-ultisnips', 'coc-sh', 'coc-clangd', 'coc-pyright', 'coc-vimtex',
             \ 'coc-html', 'coc-css', 'coc-tsserver', 'coc-json', 'coc-julia']
 
 " Tree sitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
-" Snippets
-" Plug 'sirver/ultisnips'
-" let g:UltiSnipsSnippetsDir = '$HOME/linux-config/vim-snippets'
-" let g:UltiSnipsExpandTrigger = '<tab>'
-" let g:UltiSnipsJumpForwardTrigger = '<tab>'
-" let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
 " Color scheme
 set termguicolors
@@ -75,7 +68,7 @@ require'nvim-treesitter.configs'.setup {
   ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   highlight = {
     enable = true,              -- false will disable the whole extension
-    -- disable = { "python" },  -- list of language that will be disabled
+    disable = { "latex" },  -- list of language that will be disabled
     custom_captures = {
       ["keyword.operator"] = "TSKeyword", -- Keyword, TSKeyword, Operator
     },

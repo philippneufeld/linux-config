@@ -2,6 +2,9 @@
 env:
   TERM: screen-256color
 
+font:
+  size: 8
+
 window:
   opacity: 0.9
 
