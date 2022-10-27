@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # check for config directory
-CONFIGDIR="$HOME/linux-config/"
+CONFIGDIR="$HOME/linux-config"
 [[ -d "$CONFIGDIR" ]] || echo "$CONFIGDIR not found"
 
 function create_link() {
