@@ -22,6 +22,10 @@ let g:coc_global_extensions = [
 " Tree sitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
+" File explorer
+Plug 'nvim-tree/nvim-web-devicons' " for file icons
+Plug 'nvim-tree/nvim-tree.lua'
+
 " Color scheme
 set termguicolors
 Plug 'arcticicestudio/nord-vim'
@@ -75,6 +79,18 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 EOF
+
+"
+" File explorer settings
+"
+lua <<EOF
+    vim.g.loaded_netrw = 1
+    vim.g.loaded_netrwPlugin = 1
+    require("nvim-tree").setup()
+EOF
+
+nmap <leader>ee :NvimTreeFocus<ENTER>
+nmap <leader>er :NvimTreeToggle<ENTER>
 
 "
 " Colorscheme settings

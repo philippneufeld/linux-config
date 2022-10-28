@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Get a screenshot
 import -silent -window root /tmp/i3lock-gen.bmp

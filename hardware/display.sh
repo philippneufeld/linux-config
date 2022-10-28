@@ -1,4 +1,4 @@
-#!/bin/sh
+#/usr/bin/env bash
 
 # set laptop resolution to 1920x1080
 if [[ "$HOSTNAME" == "panama" ]] ; then

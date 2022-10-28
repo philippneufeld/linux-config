@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # check for config directory
 CONFIGDIR="$HOME/linux-config"
@@ -41,5 +41,4 @@ create_link $CONFIGDIR/dir_colors $HOME/.dir_colors
 create_link $CONFIGDIR/i3 $HOME/.config/i3
 create_link $CONFIGDIR/alacritty $HOME/.config/alacritty
 create_link $CONFIGDIR/nvim $HOME/.config/nvim
-
 

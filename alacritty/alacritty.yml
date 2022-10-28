@@ -3,7 +3,7 @@ env:
   TERM: screen-256color
 
 font:
-  size: 8
+  size: 10
 
 window:
   opacity: 0.9
