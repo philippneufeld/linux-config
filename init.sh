@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# get PWD
+PWD=$(pwd)
+
 # check for config directory
 CONFIGDIR="$HOME/linux-config"
 [[ -d "$CONFIGDIR" ]] || echo "$CONFIGDIR not found"
@@ -42,3 +45,9 @@ create_link $CONFIGDIR/i3 $HOME/.config/i3
 create_link $CONFIGDIR/alacritty $HOME/.config/alacritty
 create_link $CONFIGDIR/nvim $HOME/.config/nvim
 
+# create alacritty config
+cd $CONFIGDIR/alacritty
+python3 generate.py
+
+# return to pwd
+cd $PWD
