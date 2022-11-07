@@ -34,7 +34,7 @@ colors:
     dim_foreground: '#a5abb6'
     foreground: '#d8dee9'
   search:
-    bar:
+    footer_bar:
       background: '#434c5e'
       foreground: '#d8dee9'
     matches:
@@ -49,6 +49,6 @@ colors:
 env:
   TERM: screen-256color
 font:
-  size: 7
+  size: 10
 window:
   opacity: 0.9

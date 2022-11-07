@@ -15,7 +15,8 @@ if __name__ == '__main__':
     os.makedirs(location, exist_ok=True)
 
     # download picture
-    download_daily_image(os.path.join(location, "bing_wallpaper.jpg"))
+    filename = download_daily_image(os.path.join(location, "bing_wallpaper.jpg"))
+    print(filename)
 
     # update nitrogen (wallpaper app)
     os.system("nitrogen --restore")
