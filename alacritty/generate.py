@@ -9,7 +9,7 @@ if __name__ == '__main__':
 
     hostname = socket.gethostname()
     if hostname == "panama":
-        data["font"]["size"] = 7
+        data["font"]["size"] = 6
 
     with open("./alacritty.yml", "w") as f:
         yaml.safe_dump(data, f)
