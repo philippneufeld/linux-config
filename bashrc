@@ -114,7 +114,6 @@ if [[ "$HOSTNAME" == "ludwigsburg" ]] ; then
     fi
     
     alias meas="cd $HOME/TGS/Measurements/$(date '+%Y')"
-    alias meas_today="cd $HOME/TGS/Measurements/$(date '+%Y')/$(date '+%Y-%m-%d')"
 fi
 
 # Open dolphin at current directory
