@@ -4,6 +4,11 @@ set shiftwidth=4
 set expandtab
 set relativenumber
 
+" Map leader to space
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
+
 call plug#begin('~/.vim/plugged')
 
 " Airline
@@ -89,8 +94,8 @@ lua <<EOF
     require("nvim-tree").setup()
 EOF
 
-nmap <leader>ee :NvimTreeFocus<ENTER>
-nmap <leader>er :NvimTreeToggle<ENTER>
+nmap <leader>tt :NvimTreeFocus<ENTER>
+nmap <leader>tr :NvimTreeToggle<ENTER>
 
 "
 " Colorscheme settings
