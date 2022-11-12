@@ -113,7 +113,7 @@ if [[ "$HOSTNAME" == "ludwigsburg" ]] ; then
         alias tgscontrol="launch_tgscontrol_app"
     fi
     
-    alias meas="cd $HOME/TGS/Measurements/$(date '+%Y')"
+    alias meas="cd $HOME/MicCells/TraceGasSensing/Measurements/$(date '+%Y')"
 fi
 
 # Open dolphin at current directory
