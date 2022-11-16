@@ -38,7 +38,6 @@ function create_link() {
 
 # create symbolic links to the configuration files
 create_link $CONFIGDIR/bashrc $HOME/.bashrc
-create_link $CONFIGDIR/vimrc $HOME/.vimrc
 create_link $CONFIGDIR/tmux.conf $HOME/.tmux.conf
 create_link $CONFIGDIR/dir_colors $HOME/.dir_colors
 create_link $CONFIGDIR/i3 $HOME/.config/i3
