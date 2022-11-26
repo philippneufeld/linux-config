@@ -40,6 +40,9 @@ keymap("n", "<Leader>O", "O<Esc>0\"_D", opts)
 -- Transparency
 keymap("n", "<Leader>t", ":TransparentToggle<CR>", opts)
 
+-- File explorer
+keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
+
 --
 -- VISUAL
 --
