@@ -1,4 +1,3 @@
-
 -- short aliases for commonly used options and functions
 local opts = { noremap = true, silent = true }
 local term_opts = { silent = true }
@@ -43,6 +42,14 @@ keymap("n", "<Leader>t", ":TransparentToggle<CR>", opts)
 -- File explorer
 keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
 
+-- Telescope
+keymap("n", "<Leader>ff", ":Telescope find_files<CR>", opts)
+keymap("n", "<Leader>fg", ":Telescope live_grep<CR>", opts)
+
+-- Terminal
+keymap("n", "<C-t>", ":ToggleTerm<CR>", opts)
+keymap("n", "<C-p>", ":lua term_python_toggle()<CR>", opts)
+
 --
 -- VISUAL
 --
@@ -50,4 +57,3 @@ keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
 -- Stay in indent mode
 keymap("v", ">", ">gv", opts)
 keymap("v", "<", "<gv", opts)
-

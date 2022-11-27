@@ -47,7 +47,7 @@ vim.opt.guifont = "monospace:h17"
 
 -- enable short timeout to wait after partial key sequence
 vim.opt.timeout = true
-vim.opt.timeoutlen = 300
+vim.opt.timeoutlen = 750
 
 -- write undo history to a file
 vim.opt.undofile = true
