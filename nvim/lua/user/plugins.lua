@@ -97,6 +97,9 @@ return packer.startup(function(use)
     -- terminal
     use "akinsho/toggleterm.nvim"
 
+    -- vimtex
+    use "lervag/vimtex"
+
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
         require("packer").sync()
