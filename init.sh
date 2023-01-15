@@ -4,7 +4,8 @@
 PWD=$(pwd)
 
 # check for config directory
-CONFIGDIR="$HOME/linux-config"
+SCRIPT=$(realpath -s "$0")
+CONFIGDIR=$(dirname "$SCRIPT")
 [[ -d "$CONFIGDIR" ]] || echo "$CONFIGDIR not found"
 
 function create_link() {
