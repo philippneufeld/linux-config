@@ -36,9 +36,6 @@ keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 keymap("n", "<Leader>o", "o<Esc>0\"_D", opts)
 keymap("n", "<Leader>O", "O<Esc>0\"_D", opts)
 
--- Transparency
-keymap("n", "<Leader>t", ":TransparentToggle<CR>", opts)
-
 -- File explorer
 keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
 

@@ -47,7 +47,6 @@ return packer.startup(function(use)
     use "wbthomason/packer.nvim"
 
     -- colorschemes
-    use "xiyaowong/nvim-transparent"
     use "lunarvim/darkplus.nvim"
 
     -- file explorer
