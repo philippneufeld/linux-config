@@ -1,15 +1,6 @@
 #!/usr/bin/env bash
 
-# get PWD
-PWD=$(pwd)
-
-# check for config directory
-SCRIPT=$(realpath -s "$0")
-CONFIGDIR=$(dirname "$SCRIPT")
-[[ -d "$CONFIGDIR" ]] || echo "$CONFIGDIR not found"
-
 function create_link() {
-
     # check that link destination is existing
     if [[ ! ((-f "$1") || (-d "$1")) ]] ; then
         echo "$1 not found! Skipping..."
@@ -37,17 +28,14 @@ function create_link() {
     return 0
 }
 
+# check for linux-config directory
+SCRIPT=$(realpath -s "$0")
+CONFIGDIR=$(dirname "$SCRIPT")
+
+# make sure that $HOME/.config directory exists
+[[ -d "$HOME/.config" ]] || mkdir "$HOME/.config"
+
 # create symbolic links to the configuration files
-create_link $CONFIGDIR/bashrc $HOME/.bashrc
-create_link $CONFIGDIR/tmux.conf $HOME/.tmux.conf
-create_link $CONFIGDIR/dir_colors $HOME/.dir_colors
-create_link $CONFIGDIR/i3 $HOME/.config/i3
-create_link $CONFIGDIR/alacritty $HOME/.config/alacritty
-create_link $CONFIGDIR/nvim $HOME/.config/nvim
+create_link "$CONFIGDIR/bashrc" "$HOME/.bashrc"
+create_link "$CONFIGDIR/nvim" "$HOME/.config/nvim"
 
-# create alacritty config
-cd $CONFIGDIR/alacritty
-python3 generate.py
-
-# return to pwd
-cd $PWD
